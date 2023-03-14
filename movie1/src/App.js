@@ -25,6 +25,13 @@ export default function App() {
      link="https://hotstar.com"
      />
 
+     <Card
+     imgsrc="https://images4.alphacoders.com/573/thumbbig-57394.webp"
+     title="Netfilx orignal Series"
+     sname="joker"
+     link="https://hotstar.com"
+     />
+
      </>
     </div>
   );
