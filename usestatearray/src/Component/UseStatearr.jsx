@@ -7,21 +7,35 @@ const UseArry = () => {
   ];
   const [arr, setarr] = useState(userdata);
   console.log(arr);
+ 
+
   const clearit= ()=>{
     setarr([]);
     
   }
+  const removel= (id)=>{
+    const newarr= arr.filter((el)=>{
+      return el.id!==id;
+    })
+    setarr(newarr)
+  }
   return (
     <>
 
-      {arr.map((el) => (
-        <h1 key={el.id}>
+      {arr.map((el) => {
 
-          Name:{el.name}
-           <br/>
-          Age:{el.age}
-        </h1>
-      ))}
+         return (
+              <h1 key={el.id}>
+             {el.name} & Age{el.age}
+             <button onClick={ ()=>removel(el.id)}>Remove</button>
+              </h1>
+
+         )
+      })}
+
+
+
+
 {
   arr.length>0 &&
      <button onClick={clearit}>
