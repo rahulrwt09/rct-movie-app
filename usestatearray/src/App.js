@@ -1,4 +1,4 @@
-import Usearr from "./component/UseStateArr";
+import Usearr from "./Component/UseStateArr";
 export default function App() {
   return (
     <div className="App">
