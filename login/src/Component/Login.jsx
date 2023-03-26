@@ -9,10 +9,18 @@ const   [allentry, setallentry]= useState([])
 
  const Submit= (e)=>{
   e.preventDefault();
+  if(email && password){
   const newentry= {email:email, password:password}
   setallentry([...allentry, newentry])
   console.log(allentry);
+  setEmail("")
+  setPassword("")
  } 
+ else{
+    alert("Fill in the blanks")
+ }
+}
+
 
 
    return(
