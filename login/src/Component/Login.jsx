@@ -53,7 +53,7 @@ const   [allentry, setallentry]= useState([])
               <p>{el.email}</p>
               <p>{el.password}</p>
               </div>
-            )
+            ) 
         } )
        }
     </div>
