@@ -6,7 +6,8 @@ function App() {
     return (
     <div>
     <Navbar/>
-     <Allroute/> 
+    <div style={{textAlign:'center'}}><Allroute/> </div>
+
    
     </div>
   );

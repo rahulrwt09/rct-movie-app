@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 const   links= [
       {path:"/", text:"Home"},
       {path:"/about", text:"About"},
@@ -19,10 +19,16 @@ function Navbar(){
             >
              {links.map((link)=>(
                 
-          <Link key={link.path} to={link.path} >
+          <NavLink 
+            style={({isActive})=>{return isActive?{color:"green", backgroundColor:"pink"}:{color:"black"}}
+            
+            }
+          
+           
+          key={link.path} to={link.path} >
            {link.text}
            
-          </Link>
+          </NavLink>
              ))}
    
            
