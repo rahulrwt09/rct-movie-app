@@ -1,7 +1,13 @@
-import {Link} from "react-router-dom"; 
+import {Link} from "react-router-dom";
+const   links= [
+      {path:"/", text:"Home"},
+      {path:"/about", text:"About"},
+      {path:"/Contact", text:"Contact"},
+];
 function Navbar(){
     
       return (
+
         <div style={
             {
               display:"flex",
@@ -11,9 +17,16 @@ function Navbar(){
       
             }}
             >
-             <Link to="/">Home</Link>
-             <Link to="/About">About</Link>
-             <Link to="/Contact">Contact</Link>
+             {links.map((link)=>(
+                
+          <Link key={link.path} to={link.path} >
+           {link.text}
+           
+          </Link>
+             ))}
+   
+           
+            
            </div>
       );
 
