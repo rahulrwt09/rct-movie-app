@@ -4,9 +4,10 @@ const User= () =>{
     useEffect(()=>{
       fetch('https://reqres.in/api/users?page=2')
       .then((res)=>res.json())
-      .then((res)=>setData(res.data))
+      .then((res)=>setData(res))
       .catch((err)=>console.log(err));
     }, [])
+    console.log(data);
     return (
         <>
             <h1>
