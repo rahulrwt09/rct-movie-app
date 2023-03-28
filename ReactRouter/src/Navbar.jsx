@@ -3,6 +3,7 @@ const   links= [
       {path:"/", text:"Home"},
       {path:"/about", text:"About"},
       {path:"/Contact", text:"Contact"},
+      {path:"/User", text:"User"},
 ];
 function Navbar(){
        const defaultcolor= {
