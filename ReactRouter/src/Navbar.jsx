@@ -5,7 +5,19 @@ const   links= [
       {path:"/Contact", text:"Contact"},
 ];
 function Navbar(){
-    
+       const defaultcolor= {
+            color:"black",
+        
+            textDecoration:"none",
+
+       }
+
+       const activecolor= {
+            color:"green",
+            backgroundColor:"Pink",
+            textDecoration:"none",
+
+       }
       return (
 
         <div style={
@@ -20,7 +32,7 @@ function Navbar(){
              {links.map((link)=>(
                 
           <NavLink 
-            style={({isActive})=>{return isActive?{color:"green", backgroundColor:"pink"}:{color:"black"}}
+            style={({isActive})=>{return isActive?activecolor:defaultcolor}
             
             }
           
