@@ -6,4 +6,9 @@
 2- LOGIN Button
 - login button  (Set Auth True);
 
+3-Navbar.jsx
+  -check Auth
+ -logout button
+
+
 

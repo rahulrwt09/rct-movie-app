@@ -1,4 +1,7 @@
-import {Link, NavLink} from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "./Context/Authcontext";
+
+import { NavLink} from "react-router-dom";
 const   links= [
       {path:"/", text:"Home"},
       {path:"/about", text:"About"},
@@ -7,6 +10,7 @@ const   links= [
       {path:"/Login", text:"Login"},
 ];
 function Navbar(){
+  const {isAuth, logout}= useContext(AuthContext)
        const defaultcolor= {
             color:"black",
         
@@ -44,8 +48,9 @@ function Navbar(){
            
           </NavLink>
              ))}
-   
-           
+    
+            <p>IsAuth:{isAuth?"Yes":"No"}</p>
+            <button disabled={!isAuth} onClick={logout}>Logout</button>
             
            </div>
       );
