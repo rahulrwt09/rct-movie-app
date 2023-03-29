@@ -10,5 +10,6 @@
   -check Auth
  -logout button
 
+4-add naviagter
 
 

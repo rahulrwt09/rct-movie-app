@@ -1,7 +1,10 @@
-import {useEffect, useState} from "react"
-import {Link} from "react-router-dom"
+import {useEffect, useState, useContext} from "react"
+import { AuthContext } from "../Context/Authcontext";
+
+import {Link,Navigate} from "react-router-dom"
 const User= () =>{
     const [data, setData]= useState({});
+    const {isAuth}= useContext(AuthContext)
     useEffect(()=>{
       fetch('https://reqres.in/api/users?page=1')
       .then((res)=>res.json())
@@ -9,6 +12,10 @@ const User= () =>{
       .catch((err)=>console.log(err));
     }, [])
     console.log(data);
+
+    if(!isAuth){
+        return <Navigate to="/Login"/>
+    }
     return (
         <>
             <h1>
